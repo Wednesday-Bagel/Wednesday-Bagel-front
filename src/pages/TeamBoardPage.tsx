@@ -77,8 +77,9 @@ export function TeamBoardPage() {
             <div className="w-1/2 mt-10 mb-10">
               <button
                 onClick={() => {
+                  console.log("test");
                   copyTeamUrl(
-                    `http://localhost:3000/home/?teamCode=${teamInfo.teamCode}`
+                    `http://jt-project.net/home/?teamCode=${teamInfo.teamCode}`
                   );
                 }}
                 disabled={!teamInfo.teamCode}
