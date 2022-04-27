@@ -7,8 +7,9 @@ import {
   individualResultAtom,
   participantInfoAtom,
   progressAtom,
+  teamInfoAtom,
 } from "../recoil/quiz";
-import { quizAnswerAtom, QuizNew, teamInfoAtom } from "../recoil/state";
+import { quizAnswerAtom, QuizNew } from "../recoil/state";
 
 interface Props {
   order: number;
@@ -55,7 +56,6 @@ export const QuizUnit: FC<Props> = function QuizUnit({
     // 다음 문제를 위해
     setProgress(order);
   };
-
   const onSubmit = async () => {
     if (quizAnswer) {
       const tempAnswerList = quizAnswer.slice();

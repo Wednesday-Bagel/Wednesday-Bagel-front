@@ -17,7 +17,6 @@ const ParticipantInfoPage: FC = function ParticipantInfoPage() {
   const teamInfo = useRecoilValue(teamInfoAtom);
   const [searchParams] = useSearchParams();
   const paramString = searchParams.toString();
-
   const onSubmit = async (data: any) => {
     setParticipantInfo(data.participantInfo);
     navigate(`/questions/?${paramString}`);

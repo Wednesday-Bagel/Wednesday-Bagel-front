@@ -26,8 +26,10 @@ export function TeamBoardPage() {
 
       try {
         var successful = document.execCommand("copy");
-        var msg = successful ? "successful" : "unsuccessful";
-        console.log(msg);
+        var msg = successful
+          ? "팀 링크 복사에 성공하였습니다."
+          : "팀 링크 복사에 실패하였습니다.";
+        alert(msg);
       } catch (err) {
         console.log("Was not possible to copy te text: ", err);
       }

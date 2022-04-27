@@ -21,6 +21,11 @@ const TeamInfoPage: FC = function TeamInfoPage() {
       const { data: data_ } = await api_.post("/home", {
         teamName: data.teamInfo.teamName,
       });
+      console.log({
+        teamName: data.teamInfo.teamName,
+        teamCode: data_.teamCode,
+      });
+
       setTeamInfo({
         teamName: data.teamInfo.teamName,
         teamCode: data_.teamCode,

@@ -1,11 +1,14 @@
 import { useCallback } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
-import { participantInfoAtom, progressAtom } from "../recoil/quiz";
+import {
+  participantInfoAtom,
+  progressAtom,
+  teamInfoAtom,
+} from "../recoil/quiz";
 import {
   quizAnswerAtom,
   quizSelector,
-  teamInfoAtom,
   teamResultSelctorFamily,
 } from "../recoil/state";
 

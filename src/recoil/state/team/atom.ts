@@ -11,8 +11,3 @@ export const teamResultDataAtomFamily = atomFamily<TeamResult | null, string>({
   key: "teamResultListDataAtomFamily",
   default: null,
 });
-
-export const teamInfoAtom = atom<TeamInfo | null>({
-  key: "teamInfoAm",
-  default: null,
-});

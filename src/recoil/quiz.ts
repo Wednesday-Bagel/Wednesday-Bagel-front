@@ -146,7 +146,7 @@ export const participantInfoAtom = atom<any>({
 //안쓸예정
 export const teamInfoAtom = atom<any>({
   key: "team-info-atom",
-  default: [{ team_name: null, team_id: null }],
+  default: { teamName: null, teamCode: null },
   effects_UNSTABLE: [persistTeamInfo],
 });
 
