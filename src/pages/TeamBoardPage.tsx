@@ -78,7 +78,7 @@ export function TeamBoardPage() {
               <button
                 onClick={() => {
                   copyTeamUrl(
-                    `http://localhost:3000/home/?teamCode=${teamInfo.teamCode}`
+                    `http://jt-project.net/home/?teamCode=${teamInfo.teamCode}`
                   );
                 }}
                 disabled={!teamInfo.teamCode}
@@ -96,6 +96,19 @@ export function TeamBoardPage() {
               </button>
             </div>
           </div>
+          <footer className="text-gray-400 flex flex-col justify-center items-center">
+            <button
+              onClick={() =>
+                window.open(
+                  "https://www.freepik.com/vectors/portrait-illustration"
+                )
+              }
+            >
+              "https://www.freepik.com/vectors/portrait-illustration"
+            </button>
+            Portrait illustration vector created by pikisuperstar -
+            www.freepik.com
+          </footer>
         </div>
       </div>
     );

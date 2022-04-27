@@ -33,7 +33,7 @@ export default function HomePage() {
       setTeamInfo(null);
       navigate("/participant-info");
     } else {
-      alert("퀴즈를 오류로 인해서 불러오지 못했습니당 다시 시도해주세용");
+      alert("퀴즈를 오류로 인해서 불러오지 못했습니다. 다시 시도해주세요.");
     }
   }, [
     navigate,
@@ -91,7 +91,7 @@ export default function HomePage() {
       setTeamInfo(null);
       navigate("/team-info");
     } else {
-      alert("퀴즈를 오류로 인해서 불러오지 못했습니당 다시 시도해주세용");
+      alert("퀴즈를 오류로 인해서 불러오지 못했습니다. 다시 시도해주세요.");
     }
   }, [
     navigate,
