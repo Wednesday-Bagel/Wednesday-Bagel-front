@@ -1,6 +1,6 @@
 # 직장인 점심 뭐먹지❓ 심리 테스트 - FrontEnd
 이 프로젝트는 [PLUG-IN] 팀의 기획과 [THE ORIGIN] 수료생들의 개발로 이루어진 합작 프로젝트입니다.
-서비스주소: http://jt-project.net
+<br>서비스주소: http://jt-project.net
 
 ## 🔍 프로젝트 소개
 
