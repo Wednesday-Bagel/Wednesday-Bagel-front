@@ -15,6 +15,34 @@ export function TeamBoardPage() {
   const navigate = useNavigate();
 
   const copyTeamUrl = async (url: string) => {
+    if (typeof navigator.clipboard == "undefined") {
+      console.log("navigator.clipboard");
+      var textArea = document.createElement("textarea");
+      textArea.value = url;
+      textArea.style.position = "fixed"; //avoid scrolling to bottom
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+
+      try {
+        var successful = document.execCommand("copy");
+        var msg = successful ? "successful" : "unsuccessful";
+        console.log(msg);
+      } catch (err) {
+        console.log("Was not possible to copy te text: ", err);
+      }
+
+      document.body.removeChild(textArea);
+      return;
+    }
+    navigator.clipboard.writeText(url).then(
+      function () {
+        console.log(`successful!`);
+      },
+      function (err) {
+        console.log("unsuccessful!", err);
+      }
+    );
     await navigator.clipboard.writeText(url);
     alert("클립보드에 복사되었습니다.");
   };
