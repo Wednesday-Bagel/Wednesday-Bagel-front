@@ -1,5 +1,6 @@
 import _ from "lodash";
 import { FC, useState } from "react";
+import { useQueryClient } from "react-query";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { api_ } from "../plugins/axios";
@@ -39,6 +40,8 @@ export const QuizUnit: FC<Props> = function QuizUnit({
   const setIndividualResult = useSetRecoilState(individualResultAtom);
 
   const navigate = useNavigate();
+
+  const queryClient = useQueryClient();
 
   const onNextClick = () => {
     if (quizAnswer) {
@@ -82,6 +85,7 @@ export const QuizUnit: FC<Props> = function QuizUnit({
           `/test${_.isUndefined(teamCode) ? "" : `?teamCode=${teamCode}`}`,
           answerSubmit
         );
+        await queryClient.invalidateQueries(`/result?team=${teamCode}`);
         setIndividualResult(result.data);
       } catch (err: any) {
         alert("답안 제출에 실패하였습니다 다시 시도 해주세요");
