@@ -14,21 +14,9 @@ export function TeamBoardPage() {
   const setIndividualResult = useSetRecoilState(individualResultAtom);
   const navigate = useNavigate();
 
-  const copyTeamUrl = (url: string) => {
-    if (navigator.clipboard) {
-      navigator.clipboard
-        .writeText(url)
-        .then(() => {
-          alert("클립보드에 복사되었습니다.");
-        })
-        .catch(() => {
-          alert("복사를 다시 시도해주세요.");
-        });
-    } else {
-      if (!document.queryCommandSupported("copy")) {
-        return alert("복사하기가 지원되지 않는 브라우저입니다.");
-      }
-    }
+  const copyTeamUrl = async (url: string) => {
+    await navigator.clipboard.writeText(url);
+    alert("클립보드에 복사되었습니다.");
   };
 
   if (teamResultState.status === "success" && teamResultState.data) {
