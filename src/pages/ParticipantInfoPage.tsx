@@ -29,7 +29,7 @@ const ParticipantInfoPage: FC = function ParticipantInfoPage() {
           <div className="bg-white border border-gray-200 p-4 lg:w-1/2 sm:px-8 xl:pr-16">
             <div className="px-4 py-8 text-lg font-medium space-y-4">
               <span className="block">
-                {teamInfo.team_name
+                {teamInfo?.teamName
                   ? "아래 입력란에 이름을 입력해주세요."
                   : "안녕하세요! 아래 입력란에 이름을 입력해주세요."}
               </span>
